@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="s-container">
+    <div class="nav_bar">
+      <h1 id="title">Certificate Generator</h1>
+    </div>
+
+    <div class="main-content">
+      <h3>Please Select Folder Path:</h3>
+      <div class="input">
+        <div class="custom-input">
+          <p id="selected_file_path">Not Selected Yet</p>
+          <button type="button" id="upload"><p>Upload</p></button>
+        </div>
+        <input type="file"  id="btn" placeholder="Add the file Path" hidden>
+        <p id="hT" hidden>Text</p>
+      </div>
+
+      <div id="generate_holder">
+        <button id="generate">Genegrate</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer>
+    <p>Copyright 2022 © ALL Reserved, Crafted with <span style="color: red;padding: 0 5px 0 5px;"> ❤ </span>By Kaung_Myat!!!</p>
+  </footer>
+
+  
+  
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/lib.js"></script>
+</body>
+</html>

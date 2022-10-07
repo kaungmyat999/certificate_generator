@@ -1,0 +1,21 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "Certificate Producing Software",
+  "main": "main.js",
+  "author": "Kaung Myat",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^21.0.1"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "python-shell": "^3.0.1"
+  }
+}
