@@ -1,8 +1,8 @@
 ## Certificate Generator
 
-### What's?
-    This the software powered by "Electron JS". It uses python for mainly creation of images and data are transfered 
-by JS.
+### What it is?
+    This the software powered by "Electron JS". It uses python for mainly creation of images and data are 
+    transfered by JS.
 
 ### App Flow
     It receive user input file when user select the path. 
