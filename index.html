@@ -14,25 +14,41 @@
     </div>
 
     <div class="main-content">
-      <h3>Please Select Folder Path:</h3>
-      <div class="input">
-        <div class="custom-input">
-          <p id="selected_file_path">Not Selected Yet</p>
-          <button type="button" id="upload"><p>Upload</p></button>
+      <div class="upload">
+        <h3>Please Select Input Folder Path:</h3>
+        <div class="input">
+          <div class="custom-input">
+            <p id="selected_file_path">Not Selected Yet</p>
+            <button type="button" id="upload_btn"><p>Upload</p></button>
+          </div>
+          <input type="file"  id="upload_input" placeholder="Add the file Path" hidden>
+          <p id="upload_hT" hidden>Input</p>
         </div>
-        <input type="file"  id="btn" placeholder="Add the file Path" hidden>
-        <p id="hT" hidden>Text</p>
+      </div>
+
+      <div class="output">
+        <h3>Please Select Output Folder Path:</h3>
+        <div class="input">
+          <div class="custom-input">
+            <p id="selected_file_path2">Not Selected Yet</p>
+            <button type="button" id="output_btn"><p>Select</p></button>
+          </div>
+          <input type="file"  id="output_input" placeholder="Upload Path" hidden>
+          <p id="output_hT" hidden>Output</p>
+        </div>
       </div>
 
       <div id="generate_holder">
         <button id="generate">Genegrate</button>
       </div>
+
+      <h3 id="gotSuccess_btn" style="display: none;text-align: center;padding-top:30px;font-size: 24px;">Nothing</h3>
       
     </div>
   </div>
 
   <footer>
-    <p>Copyright 2022 © ALL Reserved, Crafted with <span  style="color: red;padding: 0 5px 0 5px;"> ❤ </span>By Kaung_Myat!!!</p>
+    <p>Copyright 2022 © ALL Reserved, Crafted with <span style="color: red;padding: 0 5px 0 5px;"> ❤ </span>By Kaung_Myat!!!</p>
   </footer>
 
   

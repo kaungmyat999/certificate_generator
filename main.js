@@ -27,30 +27,52 @@ app.whenReady().then(() => {
 })
 
 
-ipcMain.on('select-dirs', async (event, arg) => {
-
+ipcMain.on('upload_btn_clicked', async (event, arg) => {
+    console.log("Upload CLicked");
     const result = await dialog.showOpenDialog(win, {
       properties: ['openFile']
     })
-    
+    console.log(result.filePaths);
     if(result.filePaths.length >0) {
         let user_Selected_Path =result.filePaths;
         let selectFileName = get_Selected_FileName(user_Selected_Path[0])
         let encrypted_value = encrypt(user_Selected_Path[0]);
         
-        event.sender.send("hasSelected",[encrypted_value,selectFileName])   
+        event.sender.send("hasSelected_Input",[encrypted_value,selectFileName])   
     }
-    console.log('directories selected',  result.filePaths)
-  })
+    console.log('Input directories selected', result.filePaths)
+})
+
+ipcMain.on('output_btn_clicked', async (event, arg) => {
+    const result2 = await dialog.showOpenDialog(win, {
+      properties: ['openDirectory']
+    })
+    console.log(result2.filePaths);
+    if(result2.filePaths.length >0) {
+        let user_Selected_Path2 =result2.filePaths;
+        let selectFileName2 = get_Selected_FileName(user_Selected_Path2[0])
+
+        let encrypted_value2 = encrypt(user_Selected_Path2[0]);
+        
+        event.sender.send("hasSelected_Output",[encrypted_value2,selectFileName2])   
+    }
+    console.log('output directories selected', result2.filePaths)
+})
 
 ipcMain.on('generate',(event,arg)=>{
-    event = decrypt(event)
-    let option = {
-        args:[event,2]
-    }
+    console.log("Before G => ",arg);
 
-    PythonShell.run('./python_station/caller.py', option, function (err,result) {
-        if (err) throw err;
+    arg[0] = decrypt(arg[0])
+    arg[1] = decrypt(arg[1])
+    let option = {
+        args:[arg[0],__dirname,arg[1]]
+    }
+    console.log(arg,"From Generate return");
+    
+    PythonShell.run(path.join(__dirname,'/python_station/caller.py'), option, function (err,result) {
+        console.log(result);
+        if(err) throw err;
+        (err) ?  console.log(err) : event.sender.send('got_success',["Success!"]);
         console.log('finished');
     });
 })

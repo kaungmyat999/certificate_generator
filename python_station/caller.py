@@ -4,7 +4,10 @@ import datetime,sys
 
 import os
 src =  sys.argv[1]
-src ='C:\\Users\\kaung\\Downloads\\Testing_Folder\\sample.xlsx'
+dir = sys.argv[2]
+outputPath = sys.argv[3]
+print(sys.argv)
+#src = 'C:\\Users\\kaung\\Downloads\\Testing_Folder\\sample.xlsx'
 print(type(src), "Src => ",src)
 data_arr = xlsx_to_json_converter(src)
 for i in data_arr:
@@ -12,6 +15,9 @@ for i in data_arr:
         date =datetime.datetime.now()
         res = i['Email']+str(date.year)+'-'+str(date.month)+"-"+str(date.day)+"-"+str(date.hour)+"-"+str(date.minute)+"-"+str(date.second)
         print(res)
-        text_on_img(i['Name'],res)
-        print(i)
+        try:
+            text_on_img(i['Name'],res,dir,outputPath)
+        except:
+            print("Error in creating images")
 
+        print('Success!')

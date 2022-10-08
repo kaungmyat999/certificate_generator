@@ -32,7 +32,7 @@ h1,h3{
     
 }
 
-h3 {
+.upload h3 {
     font-family: 'Lemon';
     font-style: normal;
     font-weight: 400;
@@ -40,7 +40,26 @@ h3 {
     line-height: 39px;
     padding-right: 12px;
     
+    
 }
+
+.output h3 {
+    font-family: 'Lemon';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 39px;
+    padding-right: 0px;
+    
+    
+}
+.upload {
+    margin-top: 30px;
+}
+.output{
+    margin-top: 50px;
+}
+
 
 
 .main-content{
@@ -61,10 +80,15 @@ h3 {
         min-height: 403px;
     }
 }
-#btn{
+@media screen and (min-height:601px) {
+    .main-content{
+        min-height: 576.5px;
+    }
+}
+/* .input,.output{
     margin-top: 2rem;
     padding-left: 30px;
-}
+} */
 #generate_holder{
     text-align: center;
     align-self: center;
@@ -96,7 +120,7 @@ h3 {
     padding:3px;
 }
 
-#upload{
+#upload_btn, #output_btn{
     
     background-color: #F50057;
     padding: 0px 14px 0px 14px;
@@ -105,12 +129,14 @@ h3 {
     
 }
 
-#upload:hover{
+  
+
+#upload_btn:hover, #output_btn:hover{
     background-color: #f73378;
     border: 1px solid #AB003C;
 }
 
-#upload p{
+#upload_btn p,#output_btn p{
     color: white;
 }
 
@@ -137,7 +163,7 @@ footer{
 }
 
 
-#selected_file_path{
+#selected_file_path, #selected_file_path2{
     padding: 4px 0 4px 1px;
     font-family: 'Roboto Mono', monospace;
     font-style: normal;
