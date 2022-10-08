@@ -40,7 +40,7 @@ ipcMain.on('select-dirs', async (event, arg) => {
         
         event.sender.send("hasSelected",[encrypted_value,selectFileName])   
     }
-    console.log('directories selected', result.filePaths)
+    console.log('directories selected',  result.filePaths)
   })
 
 ipcMain.on('generate',(event,arg)=>{

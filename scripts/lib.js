@@ -6,7 +6,7 @@ const get_Selected_FileName = (input_String)=>{
         let splited_arr =  input_String.split('\\')
         console.log("Sp",splited_arr);
         let res = splited_arr[(splited_arr.length) - 1]
-        console.log("Inside FUnc",res);
+        console.log("Inside Func",res);
         return res;
     }else{
         return "Selected"

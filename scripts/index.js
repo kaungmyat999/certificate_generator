@@ -15,7 +15,7 @@ ipcRenderer.on("hasSelected",(event,arg)=>{
   
   hiddenText.value = arg[0]
   input.innerHTML = arg[1];
-  console.log("Input Path ",input.value);
+  console.log("Input Path => ",input.value);
 })
 
 

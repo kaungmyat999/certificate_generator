@@ -8,7 +8,7 @@ def text_on_img(input_text,output_filename):
     image_editable = ImageDraw.Draw(my_image)
     w, h  = image_editable.textsize(input_text)
     print("W",W,"H ",H, "w", w,'h',h)
-    image_editable.text((((W-w)/2)-((w/6)*20), (H-h)/2), input_text,'#695d07',font=title_font)
+    image_editable.text((((W-w)/2)-((w/6)*20), (H-h)/2), input_text, '#695d07',font=title_font)
     my_image.save('./python_station/outputs/'+output_filename+".png")
 
 

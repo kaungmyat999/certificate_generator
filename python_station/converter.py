@@ -8,4 +8,3 @@ def xlsx_to_json_converter(xlsx_file):
     y = json.loads(thisisjson)
     return (y)
 
-    # print('Excel Sheet to JSON:\n',(y[4]['Status']) )

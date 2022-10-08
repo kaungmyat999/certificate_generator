@@ -4,7 +4,7 @@ import datetime,sys
 
 import os
 src =  sys.argv[1]
-src = 'C:\\Users\\kaung\\Downloads\\Testing_Folder\\sample.xlsx'
+src ='C:\\Users\\kaung\\Downloads\\Testing_Folder\\sample.xlsx'
 print(type(src), "Src => ",src)
 data_arr = xlsx_to_json_converter(src)
 for i in data_arr:

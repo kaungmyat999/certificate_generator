@@ -11,6 +11,7 @@ function encrypt(input_Text) {
 
 function decrypt(input_Cipher) {
     return CryptoJS.AES.decrypt(input_Cipher,KEY).toString(CryptoJS.enc.Utf8);
+
 }
 
 module.exports = {encrypt,decrypt}
