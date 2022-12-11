@@ -1,7 +1,7 @@
 ## Certificate Generator
 
 ### What it is?
-    This the software powered by "Electron JS". It uses python for mainly creation of images and data are 
+    This the certificate generator software for Help Myanmar powered by "Electron JS". It uses python for mainly creation of images and data are 
     transfered by JS.
 
 ### App Flow
